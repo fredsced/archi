@@ -123,7 +123,7 @@ public class ProjectService implements IProjectService {
 
 	@Override
 	public List<Project> projectByKeyword(@NotNull String keyword) {
-		return projects.findByNameContainingIgnoreCase(keyword);
+		return projects.findByNameContainsIgnoreCase(keyword);
 	}
 
 	@Override

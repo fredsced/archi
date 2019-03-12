@@ -11,5 +11,5 @@ import net.secudev.archi.model.Project;
 public interface ProjectRepository extends JpaRepository<Project, Long> {
 
 	Project findByName(String name);
-	List<Project> findByNameContainingIgnoreCase(String keyword);
+	List<Project> findByNameContainsIgnoreCase(String keyword);
 }

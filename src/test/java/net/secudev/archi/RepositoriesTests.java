@@ -44,8 +44,8 @@ public class RepositoriesTests {
 	    
 	    assertNotNull(projects.findByName("Kata"));
 	    assertTrue(projects.findByName("kata")==null);
-	    assertTrue(projects.findByNameContainingIgnoreCase("ka").size()==2);
-	    assertTrue(projects.findByNameContainingIgnoreCase("aka").size()==0);		
+	    assertTrue(projects.findByNameContainsIgnoreCase("ka").size()==2);
+	    assertTrue(projects.findByNameContainsIgnoreCase("aka").size()==0);		
 	    
 	    projects.deleteAll();
 	}

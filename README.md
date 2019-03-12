@@ -28,6 +28,17 @@ C'est là que vous verrez les améliorations qui restent à faire.
 * les files d'attentes de messages (MQ pour Message Queue)
 * les actuatators
 
+### Shémas
+
+## Layers 
+![Alt text](assets/layers.JPG "layers")
+
+## UML 
+![Alt text](assets/uml.JPG "uml")
+
+## SQL 
+![Alt text](assets/sql.JPG "sql")
+
 ### Quelques liens utiles
 
 https://www.baeldung.com/database-migrations-with-flyway

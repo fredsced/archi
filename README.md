@@ -7,6 +7,12 @@ Ce repository est associé à une project type Kanban accessible via le menu de 
 
 C'est là que vous verrez les améliorations qui restent à faire.
 
+J'ai aussi publié ce projet sur le cloud PIVOTAL, notez que j'efface les data toutes les nuits grâce à la classe Scheduler dansle package infrastructure.
+
+Voilà le lien vers la documentation d'API REST :
+https://archi.cfapps.io/swagger-ui.html
+
+
 ### Ce qui m'a semblé important de mettre en avant dans ce projet
 * structure en couches : model, service et controller
 * la notion de DTO et leur transformation

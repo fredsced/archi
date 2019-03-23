@@ -2,6 +2,7 @@ package net.secudev.archi;
 
 import javax.servlet.ServletContext;
 
+import org.modelmapper.Conditions;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,19 +23,18 @@ public class ArchiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ArchiApplication.class, args);
 	}
-	
-	  @Bean
-	    public ModelMapper modelMapper() {
-	        return new ModelMapper();
-	    }
-	  
-	  @Bean
-	    public Docket apiDocket(ServletContext servletContext) {
-	        return new Docket(DocumentationType.SWAGGER_2)	        		
-	                .select()
-	                .apis(RequestHandlerSelectors.basePackage("net.secudev.archi.api"))  
-	                .paths(PathSelectors.any())
-	                .build()
-	                .useDefaultResponseMessages(false);
-	    }
+
+	@Bean
+	public ModelMapper modelMapper() {
+		ModelMapper mapper = new ModelMapper();
+		mapper.getConfiguration().setPropertyCondition(Conditions.isNotNull());
+		return mapper;
+	}
+
+	@Bean
+	public Docket apiDocket(ServletContext servletContext) {
+		return new Docket(DocumentationType.SWAGGER_2).select()
+				.apis(RequestHandlerSelectors.basePackage("net.secudev.archi.api")).paths(PathSelectors.any()).build()
+				.useDefaultResponseMessages(false);
+	}
 }

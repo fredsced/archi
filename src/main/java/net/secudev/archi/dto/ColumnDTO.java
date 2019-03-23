@@ -15,4 +15,7 @@ public class ColumnDTO implements Serializable {
 	private Long id;
 	@Getter @Setter
 	private Long projectId;
+	
+	@Getter @Setter
+	private String projectName;
 }

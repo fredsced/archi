@@ -19,6 +19,10 @@ public class TaskDTOConverter {
 	public Task taskDtoToTask(TaskDTO dto) {		
 		return modelMapper.map(dto, Task.class);
 	}
+	//Ne copie que les valeurs non nulles du dto vers l'entity
+	public void taskDtoToTaskCopy(TaskDTO dto, Task entity) {		
+		modelMapper.map(dto, entity);
+	}
 
 	public TaskDTO taskToTaskDto(Task entity) {	
 		return modelMapper.map(entity, TaskDTO.class);
